@@ -48,6 +48,10 @@ public class Fragment_facilities extends Fragment {
         JSONArray jsonArray = new JSONArray(result);
         for (int i = 0; i < jsonArray.length(); i++) {
             JSONObject json = jsonArray.getJSONObject(i);
+            if(i==0)
+            {
+                f_name = json.getString("f_name");
+            }
            f_name = f_name +" \n" + json.getString("f_name");
         }
         facilities.setText(f_name);
